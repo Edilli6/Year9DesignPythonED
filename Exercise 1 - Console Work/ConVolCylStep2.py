@@ -1,13 +1,17 @@
 import math
 
+print("\n\tThe volume of a cylinder is: ")
+print("\n\t\t\tV = \u03C0 \u00d7 radius \u00b2 \u00d7 height")
+print("\n\tThis program will take as input the radius and height")
+print("\tand print the volume.")
 #Input 
 #What inputs are needed to calculate the volume of a cylinder
-name = input("What is your name: ")
+name = input("\n\tWhat is your name: ")
 
-radius = input ("Input radius (cm): ")
+radius = input ("\n\tInput radius (cm): ")
 radius = int(radius)
 
-height = input ("Input height (cm): ")
+height = input ("\n\tInput height (cm): ")
 height = int(height)
 
 #Process
@@ -18,5 +22,8 @@ volume = round(volume,2)
 
 #Output
 #What is important about the output?
-
-print ("The volume is: ",volume)
+print("\n\t\tHi "+name+"!")
+print("\n\t\tGive a cylinder with:")
+print("\t\tRadius = "+str(radius))
+print("\t\tHeight = "+str(height))
+print ("\t\tThe volume is: "+str(volume)+"\n")
