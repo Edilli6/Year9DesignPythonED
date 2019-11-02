@@ -7,6 +7,8 @@ print("\tand print the volume.")
 #Input 
 #What inputs are needed to calculate the volume of a cylinder
 
+file = open("data.txt","aclear")
+
 name = input("\n\tWhat is your name: ")
 
 radius = 1
@@ -14,11 +16,16 @@ height = 1
 
 while (radius != 0 or height != 0): 
 
-	radius = input ("\n\tInput radius (cm): ")
-	radius = int(radius)
+	try: 
+		radius = input("\n\tInput radius (cm): ")
+		radius = int(radius)
 
-	height = input ("\n\tInput height (cm): ")
-	height = int(height)
+		height = input("\n\tInput height (cm): ")
+		height = int(height)
+	except:
+		print("\n\t\tNumeric Type Required")
+		height = -1
+		radius = -1
 
 	#Process
 	#What formula is used to calculate the volume of a cylinder?
@@ -35,9 +42,13 @@ while (radius != 0 or height != 0):
 	print("\t\tRadius = "+str(radius))
 	print("\t\tHeight = "+str(height))
 	print ("\t\tThe volume is: "+str(volume)+"\n")
+	file.write(str(volume)+"\n")
+
 
 else:
 	print("\n\t\tYou have entered an invalid value")
 	#Checks while boolean expression 
 
+
 print("END PROGRAM")
+file.close()
