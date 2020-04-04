@@ -1,10 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
 <style>
 
-body {
-  background-color: #00264d;
+  h4.absolute {
+  position: absolute;
+  top: 50px;
+  right: -360%;
+  width: 900px;
+  height: 100px;
+}
+
+  h2.absolute {
+  position: absolute;
+  top: 2px;
+  right: -360%;
+  width: 900px;
+  height: 100px;
+  }
+
+  body, html {
+  height: 100%;
+  margin-top: 21px;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  background-image: url("img/unnamed-1.jpg");
+  
+  height: 100%; 
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: 100px;
+  left: 20px;
+
+}
+
+.bg-text {
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0, 0.4); 
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
 }
 
 ul {
@@ -31,14 +86,105 @@ li a {
   text-decoration: none;
 }
 
-li a:hover:not(.active) {
-  background-color: #1f328f;
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
 }
 
-.active {
-  background-color: #1f328f;
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.Input {
+  position: absolute;
+  top: 2150px
+}
+
+.InputText {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.Inputbox {
+  height: 25px;
+  font-size: 20px;
+  display: inline-block;
+  margin-top: 5px;
+  font-family: 'Helvetica';
+}
+
+.InputButton {
+  background-color:#3252a8;
+  border-radius:7px;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family: 'Helvetica';
+  font-size:20px;
+  padding:4px 30px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #2f6627;
+  display: inline-block;
+}
+.InputButton:hover {
+  background-color:#3252a8;
+}
+.InputButton:active {
+  position:relative;
+  top:1px;
+}
+
+#results {
+    font-family: 'Helvetica';
+    font-size: 18px;
+}
+
 </style>
+</head>
+<body>
+
+  <div class = "Input">
+    <h3 class = "InputText">Input countries to see their statistics :</h3>
+    
+    <input type="text" name="InputBox" class="InputBox" id="InputBox">
+
+    <button type="button" class="InputButton" id ="InputButton">Submit</button>
+
+    <p id="results"></p>
+  </div>
+
+  <div class = "Statistics"></div>
 
 <ul>
 	<li><a href="finalcopycriterionc.html"><b>Home</b></a></li>
@@ -46,6 +192,47 @@ li a:hover:not(.active) {
   <li><a class="active" href="goal14.html"><b>Life Under Water</b></a></li>
   <li><a href="commonlink.html"><b>Common Link</b></a></li>
 </ul>
+
+<div class="bg-image"></div>
+
+<div class="bg-text">
+  <h1 style="font-size:50px">Life Under Water</h1>
+  <p>By: Eric Dilli</p>
+</div>
+
+<iframe src="https://ourworldindata.org/grapher/death-rates-unsafe-water" style="width: 100%; height: 600px; border: 0px none;"></iframe>
+
+<div class="flip-card">
+<div class="flip-card-inner">
+  <div class="flip-card-front">
+    <img src="img/maxresdefault.jpg" alt="hi" style="width: 450px;height:300px;">
+  </div>
+ <div class="flip-card-back">
+<img src="img/plastic-waste-single-use-worldwide-consumption-animals-2.ngsversion.1526443358738.adapt.1900.1.jpg" alt="hi" style="width: 450px;height:300px;">
+    </div>
+  </div>
+
+<h2 class="absolute"> Facts about Goal 14!<br><br><br><br><br><br><br><br><br><br><br><br>What Can We Do To Help?
+
+ <h4 class="absolute"> Oceans cover three quarters of the Earth’s surface, contain 97 per cent of the Earth’s water, and represent 99 per cent of the living space on the planet by volume.<br><br> Over three billion people depend on marine and coastal biodiversity for their livelihoods.<br><br>Globally, the market value of marine and coastal resources and industries is estimated at $3 trillion per year or about 5 per cent of global GDP.<br><br>Oceans absorb about 30 per cent of carbon dioxide produced by humans, buffering the impacts of global warming.<br><br>Oceans serve as the world’s largest source of protein, with more than 3 billion people depending on the oceans as their primary source of protein.<br><br>Marine fisheries directly or indirectly employ over 200 million people.<br><br><br><br><br><br>Reduce Marine Pollution.<br><br>Protect and Restore Ecosystems.<br><br>Reduce Ocean Acidification.<br><br>Conserve Coastal and Marine Areas.<br><br>Increase the Economic Benefits from Sustainable Use of Marine Resources.</h3>
+
+</div>
+
+<div class="flip-card">
+<div class="flip-card-inner">
+  <div class="flip-card-front">
+    <img src="img/life_below_water_0.jpg" alt="hi" style="width: 450px;height:300px;">
+  </div>
+ <div class="flip-card-back">
+<img src="img/seagul-plastic-crisp-packet-pollution.jpg" alt="hi" style="width: 450px;height:300px;">
+    </div>
+  </div>
+
+  <script src = "goal14.js"></script>
+
+</body>
+</html>
+
 
 </body>
 </html>
